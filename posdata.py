@@ -192,7 +192,7 @@ async def main():
 
     args = p.parse_args()
 
-    ms = PrinterStatus(args.host, args.port, pmd=PrinterMotionData(args.output, quiet=args.quiet))
+    ms = PrinterStatus(args.host, args.port, pmd=PrinterMotionData(args.outputcsv, quiet=args.quiet))
     await ms.start()
 
     try:
