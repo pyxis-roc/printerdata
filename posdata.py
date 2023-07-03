@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+#
+# Copyright (C) 2023 University of Rochester
+#
+# Licensed under the GNU General Public License (GPLv3)
+#
+# Author: Sreepathi Pai
+#
 
 import json
 import moonraker_api
@@ -180,7 +187,7 @@ async def main():
     p = argparse.ArgumentParser(description="Dump printer location data from Klipper using the Moonraker API into a CSV file")
     p.add_argument("host", help="Hostname")
     p.add_argument("port", type=int, help="Port")
-    p.add_argument("output", help="Output file")
+    p.add_argument("outputcsv", help="Output CSV file")
     p.add_argument("-q", dest="quiet", action="store_true", help="Quiet output")
 
     args = p.parse_args()
